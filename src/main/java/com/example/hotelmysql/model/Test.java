@@ -1,8 +1,15 @@
 package com.example.hotelmysql.model;
 
-import javax.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 
+@Setter
+@Getter
 @Entity
 @Table(name = "test")
 public class Test extends BaseEntity{
@@ -17,27 +24,4 @@ public class Test extends BaseEntity{
     private int age = 18;
 
 
-    public String getfName() {
-        return fName;
-    }
-
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
-
-    public String getlName() {
-        return lName;
-    }
-
-    public void setlName(String lName) {
-        this.lName = lName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }

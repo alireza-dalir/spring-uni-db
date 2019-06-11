@@ -1,11 +1,16 @@
 package com.example.hotelmysql.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
+@Setter
+@Getter
 @Entity
 @Table(name = "customer")
 public class Customer extends Person {
@@ -16,13 +21,5 @@ public class Customer extends Person {
 
     @OneToOne
     private Bill bill;
-
-    public String getpId() {
-        return pId;
-    }
-
-    public void setpId(String pId) {
-        this.pId = pId;
-    }
 
 }

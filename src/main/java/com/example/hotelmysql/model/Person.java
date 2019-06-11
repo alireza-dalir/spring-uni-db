@@ -1,9 +1,14 @@
 package com.example.hotelmysql.model;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
+@Setter
+@Getter
 @MappedSuperclass
 public class Person extends BaseEntity {
 
@@ -19,35 +24,4 @@ public class Person extends BaseEntity {
     @Column(name = "address")
     private String address;
 
-    public String getfName() {
-        return fName;
-    }
-
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
-
-    public String getlName() {
-        return lName;
-    }
-
-    public void setlName(String lName) {
-        this.lName = lName;
-    }
-
-    public Long getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(Long telephone) {
-        this.telephone = telephone;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
 }
